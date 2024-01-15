@@ -38,3 +38,13 @@ newPostForm.addEventListener("submit", (event) =>{
         newPostForm.reset()
     }
 });
+
+postList.addEventListener("click", event => {
+    if(event.target.tagName === "BUTTON")
+    {
+        const postId = event.target.closest('li').id.split('-')[1];
+        const xhr = new XMLHttpRequest();
+        xhr.open("DELETE", `https://jsonplaceholder.typicode.com/posts/${postId}`);
+        xhr.send();
+    }
+});
