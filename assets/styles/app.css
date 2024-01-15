@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+.d-none{
+  display: none;
+}
+
 button {
   font: inherit;
   border: 1px solid #000053;
